@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+  background-color: #21003B;
+	display: flex;
+}
+
+/*  ###### the below code is for the aside and is the same on all pages ###### */
+aside {
+  background-color: #000000;
+  width: 225px;
+  padding: 20px;
+  float: left;
+  color: white; /* Change the text color to white */
+	border: 2px solid white; /* Add a solid red border around the aside */
+  /*box-sizing: border-box; /* Include the border width in the total width of the element */
+	
+}
+
+aside img {
+	width: 190px;
+	display: flex;
+	border: 2px solid blue; /* Add a solid blue border around the image */
+  border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+aside img.hosted-on {
+  width: 190px;
+	display: flex;
+  border: none; /* Remove the border only for this image */
+}
+
+aside a {
+	color: lightskyblue; /* Change the text color of the hyperlinks */
+}
+
+aside a:hover {
+	color: blue /* Change the text color of teh hyperlink on hover */
+}
+
+aside ul {
+  list-style-type: none; /* Remove the bullets */
+  padding-left: 15px; /* Change the default left padding */	
+}
+
+.highlight {
+  color: lightgreen; /* changes the hyperlink for the current page to a different color to indicate current location visually */
+}
+/* ###### end aside code ###### */
+
+
+/* ###### this code is for the main logo and footer and is the same on every page ###### */
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 20px;
+  margin-left: 0px;
+  color: lightblue; /* Change the text color */
+	border: 2px solid white; /* Add a solid blue border around the image */
+  align-items: center;
+  justify-content: center;
+  /*border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+main img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+	border: 2px solid blue; /* Add a solid blue border around the image */
+  border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+main img.additional-photo {
+  width: 250px; /* Set the width of the additional photo */
+  height: auto; /* Maintain aspect ratio */
+  
+  margin-top: 20px; /* Adjust the top margin as needed to control the location */
+  /* Add any additional styles specific to the additional photo */
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+	color: lightgreen; /* Change the text color for all main/h tags to the same color*/
+}
+
+.footer-content h4 {
+  text-align: center; /* Center-align the copyright statement */
+  color: lightgreen; /* Change the text color */
+  padding: 10px;
+}
+/* ###### end main code ###### */
+
+	
