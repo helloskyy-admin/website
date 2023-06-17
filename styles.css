@@ -70,7 +70,7 @@ main img {
 }
 
 main img.additional-photo {
-  width: 250px; /* Set the width of the additional photo */
+  width: 400px; /* Set the width of the additional photo */
   height: auto; /* Maintain aspect ratio */
   
   margin-top: 20px; /* Adjust the top margin as needed to control the location */
