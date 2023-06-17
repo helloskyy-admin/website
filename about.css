@@ -23,7 +23,7 @@
 
 .team-member img {
   width: 180px; /* Adjust the image size as needed */
-  height: auto;
+  height: 200px;
   margin-right: 10px; /* Add spacing between the image and text */
 }
 
