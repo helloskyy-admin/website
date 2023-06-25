@@ -1,0 +1,131 @@
+/* mobile.css */
+
+/* this section is default style for everything larger than an iphone promax (428px) 
+body {
+  background-color: #21003B;
+	display: flex;
+} */
+
+@media (max-width: 1284px) {
+  body {
+    flex-direction: column;
+  }
+  /* hide aside by default when viewing on small screens */
+  aside {
+    display: none;
+  }
+
+  /* Display the mobile menu */
+  .mobile-menu {
+  display: block;
+  /* Add any necessary styling for the mobile menu button */
+  }
+
+  /* Show the menu list when the mobile menu button is checked */
+  .mobile-menu input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+
+  aside img {
+    width: 100%;
+  }
+
+  main {
+    margin-left: 0;
+  }
+
+  main img.additional-photo {
+    width: 80%;
+  }
+}
+
+/* Top most mobile container to hold hamburger */
+
+.mobile-container {
+  display: flex;
+  height: 60px; /* Set the desired height here */
+  width: 100%;
+  align-items: center; /* Center vertically */
+  justify-content: left; /* Center horizontally */
+  padding: 10px; /* Add desired padding here */
+}
+
+/* Hamburger icon styles */
+
+.mobile-menu {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: block;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  padding: 0px; /* Add padding here */
+}
+
+.menu-icon::before,
+.menu-icon::after,
+.menu-icon .bar {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon::before {
+  top: 0;
+}
+
+.menu-icon::after {
+  bottom: 0;
+}
+
+.menu-icon .bar {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-icon .bar.middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Rotate the middle bar to create an X shape */
+.menu-toggle:checked + .menu-icon .bar.middle {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Unhide the top and bottom bars when the menu is checked */
+.menu-toggle:checked + .menu-icon::before,
+.menu-toggle:checked + .menu-icon::after {
+  opacity: 100;
+}
+
+/* Position the bars to form an X shape when the menu is checked */
+.menu-toggle:checked + .menu-icon::before {
+  /* Rotate the top line 45 degrees clockwise */
+  transform: rotate(45deg);
+}
+
+.menu-toggle:checked + .menu-icon::after {
+  /* Rotate the bottom line 45 degrees counterclockwise */
+  transform: rotate(-45deg);
+}
+
+
+
+/* ###### end main code ###### */
+
+	
