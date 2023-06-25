@@ -13,4 +13,4 @@ WORKDIR /app
 # Expose port 8000 for the web server
 EXPOSE 8000
 # Start the Python web server
-CMD ["python3", "-m", "http.server", "--cgi", "8000"]
+CMD ["python3", "cgi-bin/redirect.py"]
