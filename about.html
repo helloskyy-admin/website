@@ -4,13 +4,46 @@
 	<title>hello skyy about page</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="mobile.css">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <script src="mobile.js"></script>
 </head>
 <body>
+	<div class="mobile-container">
+		<div class="mobile-menu">
+			<input type="checkbox" id="menu-toggle" class="menu-toggle">
+			<label for="menu-toggle" class="menu-icon">
+				<span class="bar"></span>
+				<span class="bar middle"></span>
+				<span class="bar"></span>
+			</label>
+			<!-- edit the below code to highlight only the current page in the hamburger navigation menu -->
+			<aside class="mobile-aside">
+				<img src="assets/hosted_on.png" alt="hosted_on" class="hosted-on">  
+				<img src="assets/flux_banner.png" alt="Small Image">
+				<ul>
+				  <li><a href="default.html">Home:</a></li>
+				  <li><a href="about.html"><span class="highlight">About:</span></a></li>
+				  <li><a href="the_problem.html">The Problem:</a></li>
+				  <li><a href="the_solution.html">The Solution:</a></li>
+				   <li><a href="git_involved.html">Git involved!:</a></li>
+				   <ul>
+					<li><a href="https://discord.io/techdufus">Join Discord:</a></li>
+					<li><a href="learning_library.html">Learning Library:</a></li>
+					<li><a href="community_projects.html">Community Projects:</a></li>
+					<li><a href="hello_skyy_projects.html">Hello Skyy Projects:</a></li>
+					<li><a href="recommended_apps.html">Recomended Apps:</a></li>
+				  </ul>
+				  <li><a href="services.html">Services</a></li>
+			  </ul>
+			  </aside>
+		  </div>
+		</div>
+
 <!-- edit the below code to highlight only the current page in the navigation menu -->
   <aside>
 	<img src="assets/hosted_on.png" alt="hosted_on" class="hosted-on">  
