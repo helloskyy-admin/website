@@ -5,12 +5,14 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="benchmarkform.css">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <script src="mobile.js"></script>
+  <!--<script src="benchmarks.js"></script>-->
 </head>
 <body>
 	<div class="mobile-container">
@@ -69,6 +71,8 @@
 	<img src="assets/frame_002.jpg" alt="Logo">
 	<h1>PoUW recipes and benchmarks:</h1>
 	<p>Here we will be documenting commercial options, as well as build your own PoUW rigs/servers, and documenting their benchmarks!</p>
+	<p>For now this page is primarily a placeholder, as Flux has not yet released the software to benchmark PoUW servers.</p>
+	<p>Stay tuned for future updates!</p>
 	
 	<div class="team-member">
 		<img src="assets/octominer.png" alt="Team Member1">
@@ -82,11 +86,68 @@
 	<div class="team-member">
 		<img src="assets/octominer.png" alt="Team Member2">
 		<div class="member-details">
-		  <h3>Octoserver E10-X99-2</h3>
+		  <h3>Octoserver Flux Edition</h3>
 		  <p>10 GPU enterprise grade HPC server</p>
 		  <p><a href="https://octominer.com/product/octoserver-flux-edition/">Octoserver Flux Edition</a></p>
 		</div>
 	</div>
+
+	<p>Git involved by submitting your build and benchmark to our database!</p>
+
+<!--webform for entering in benchmark data on various builds for PoUW-->
+	<form id="benchmarks" action="/submit" method="post"> 
+		<fieldset id="benchmark_input">
+	<!-- Pull-down menu -->
+	<label for="processor-brand">Processor Brand:</label>
+	<select name="processor-brand" id="processor-brand">
+	  <option value="Intel">Intel</option>
+	  <option value="AMD">AMD</option>
+	</select>
+
+	  <!-- Pull-down menu -->
+	  <label for="processor-series">Processor Model:</label>
+	  <select name="processor-series" id="processor-series">
+		<option value="Intel">Intel</option>
+		<option value="AMD">AMD</option>
+	  </select>
+
+	  <!-- Pull-down menu -->
+	  <label for="processor-quantity">Processor Quantity:</label>
+	  <select name="processor-quantity" id="processor-quantity">
+		<option value="1">1</option>
+		<option value="2">2</option>
+	  </select>
+
+	  <!-- Pull-down menu -->
+	  <label for="memory">Memory:</label>
+	  <select name="memory" id="memory">
+		<option value="32">32g</option>
+		<option value="64">64g</option>
+		<option value="128">128g</option>
+		<option value="256">256g</option>
+	  </select>
+
+	  <!-- Pull-down menu -->
+	  <label for="gpu-brand">GPU Brand:</label>
+	  <select name="gpu-brand" id="gpu-brand">
+		<option value="nvidia">Nvidia</option>
+		<option value="amd">AMD</option>
+	  </select>
+
+	  <!-- Pull-down menu -->
+	  <label for="gpu-model">GPU Model:</label>
+	  <select name="gpu-model" id="gpu-model">
+		<option value="gtx-1070">GTX-1070</option>
+		<option value="rtx-3060ti">RTX-3060TI</option>
+	  </select>
+
+	  <!-- Number input field -->
+	  <label for="benchmark1">Benchmark:</label> 
+	  <input type="benchmark1" name="benchmark1">
+	  <!-- Submit button -->
+	  <input type="submit" value="Submit">	
+	</fieldset>
+	</form>
 
 <!-- the below code is the same on each page of the site -->
   <div class="footer-content">

@@ -1,4 +1,4 @@
-// main.js
+// mobile.js
 
 // Get the necessary DOM elements
 var menuToggle = document.querySelector('#menu-toggle');
