@@ -1,37 +1,85 @@
 /* CSS for benchmark web form */
 
-#benchmark_input {
-    margin-bottom: 20px;
-    border: 2px solid blue; /* Add a solid blue border around the image */
-    border-radius: 5px; /* Add border-radius to give a rounded corner effect */
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  select,
-  input[type="benchmark1"] {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    box-sizing: border-box; /* Add this line to include padding and border in the width calculation */
-  }
-  
-  input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: blue;
-  }
-  
+form#benchmarks {
+  width: 100%;
+}
+
+#benchmark_input_server {
+  margin-bottom: 20px; /* Adds 20px margin at the bottom of the benchmark_input element */
+  border: 2px solid blue; /* Add a solid blue border around the image */
+  border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+#benchmark_input_gpu {
+  margin-bottom: 20px; /* Adds 20px margin at the bottom of the benchmark_input element */
+  border: 2px solid blue; /* Add a solid blue border around the image */
+  border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+#benchmark_input_values {
+  margin-bottom: 20px; /* Adds 20px margin at the bottom of the benchmark_input element */
+  border: 2px solid blue; /* Add a solid blue border around the image */
+  border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+#benchmark_input_signature {
+  margin-bottom: 20px; /* Adds 20px margin at the bottom of the benchmark_input element */
+  border: 2px solid blue; /* Add a solid blue border around the image */
+  border-radius: 5px; /* Add border-radius to give a rounded corner effect */
+}
+
+label {
+  display: inline-block; /* Displays the label as an inline-block element */
+  font-weight: bold;
+  margin-bottom: 5px;
+  vertical-align: middle; /* Aligns the label vertically in the middle */
+  width: 180px; /* Adjust the width to your preference */
+}
+
+select,
+input[type="benchmark1"] {
+  display: inline-block; /* Displays the pull-down menus and input element as inline-block elements */
+  width: 200px; /* Adjust the width to your preference */
+  margin-bottom: 10px;
+  vertical-align: middle; /* Aligns the pull-down menus and input element vertically in the middle */
+}
+
+input[type="submit"] {
+  background-color: #007bff; /* Sets the background color of the submit button to #007bff */
+  color: #fff; /* Sets the text color of the submit button to #fff (white) */
+  padding: 5px 20px; /* Adds 5px top and bottom padding, and 20px left and right padding to the submit button */
+  border: none; /* Removes the border of the submit button */
+  border-radius: 5px; /* Adds a border-radius of 5px to the submit button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the submit button */
+}
+
+input[type="submit"]:hover {
+  background-color: blue; /* Sets the background color of the submit button to blue when hovering over it */
+}
+
+#benchmark_input_signature .config-row {
+  display: flex;
+  align-items: center; /* makes the text beside the image centered vertically */
+  justify-content: left; /* only works if width is set to 100% */
+  width: 100%; /* Make the container responsive and allows you to justify items inside it */
+}
+
+#benchmark_input_signature img {
+  width: 100px; /* Adjust the width as needed */
+  margin-right: 10px; /* Add spacing between the image and text */
+}
+
+#benchmark_input_signature .input-group-sig {
+  display: flex;
+  flex-direction: column;
+}
+
+#benchmark_input_signature .input-group-sig label,
+#benchmark_input_signature .input-group-sig input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#benchmark_input_signature .input-group-sig .sig-input {
+  width: 500px; /* Adjust the width as needed */
+}
