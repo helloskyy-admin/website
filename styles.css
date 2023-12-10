@@ -156,6 +156,14 @@ main img.additional-photo {
   /* Add any additional styles specific to the additional photo */
 }
 
+main img.fluxcore-photo {
+  width: 800px; /* Set the width of the additional photo */
+  height: auto; /* Maintain aspect ratio */
+  
+  margin-top: 20px; /* Adjust the top margin as needed to control the location */
+  /* Add any additional styles specific to the additional photo */
+}
+
 main h1, main h2, main h3, main h4, main h5, main h6 {
 	color: lightgreen; /* Change the text color for all main/h tags to the same color*/
 }

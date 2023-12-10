@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>hello skyy PoUW page</title>
+	<link rel="stylesheet"
+		  href="styles.css">
+	<link rel="stylesheet"
+		  href="about.css">
+	<link rel="stylesheet"
+		  href="mobile.css">
+	<link rel="stylesheet"
+		  href="benchmarkform.css">
+	<link rel="apple-touch-icon"
+		  sizes="180x180"
+		  href="apple-touch-icon.png">
+	<link rel="icon"
+		  type="image/png"
+		  sizes="192x192"
+		  href="android-chrome-192x192.png">
+	<link rel="icon"
+		  type="image/png"
+		  sizes="512x512"
+		  href="android-chrome-512x512.png">
+	<link rel="icon"
+		  type="image/png"
+		  sizes="32x32"
+		  href="favicon-32x32.png">
+	<link rel="icon"
+		  type="image/png"
+		  sizes="16x16"
+		  href="favicon-16x16.png">
+	<script src="mobile.js"></script>
+	<!--<script src="benchmarks.js"></script>-->
+</head>
+
+<body>
+	<div class="mobile-container">
+		<div class="mobile-menu">
+			<input type="checkbox"
+				   id="menu-toggle"
+				   class="menu-toggle">
+			<label for="menu-toggle"
+				   class="menu-icon">
+				<span class="bar"></span>
+				<span class="bar middle"></span>
+				<span class="bar"></span>
+			</label>
+			<!-- edit the below code to highlight only the current page in the hamburger navigation menu -->
+			<aside class="mobile-aside">
+				<img src="assets/hosted_on.png"
+					 alt="hosted_on"
+					 class="hosted-on">
+				<img src="assets/flux_banner.png"
+					 alt="Small Image">
+				<ul>
+					<li><a href="index.html">Home:</a></li>
+					<li><a href="about.html">About:</a></li>
+					<li><a href="the_problem.html">The Problem:</a></li>
+					<li><a href="the_solution.html">The Solution:</a></li>
+					<li><a href="git_involved.html">Git involved!:</a></li>
+					<ul>
+						<li><a href="https://discord.io/techdufus">Join Discord:</a></li>
+						<li><a href="learning_library.html"><span class="highlight">Learning Library:</span></a></li>
+						<li><a href="community_projects.html">Community Projects:</a></li>
+						<li><a href="hello_skyy_projects.html">Hello Skyy Projects:</a></li>
+						<li><a href="recommended_apps.html">Recommended Apps:</a></li>
+					</ul>
+					<li><a href="services.html">Services</a></li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+
+	<!-- edit the below code to highlight only the current page in the navigation menu -->
+	<aside>
+		<img src="assets/hosted_on.png"
+			 alt="hosted_on"
+			 class="hosted-on">
+		<img src="assets/flux_banner.png"
+			 alt="Small Image">
+		<ul>
+			<li><a href="index.html">Home:</a></li>
+			<li><a href="about.html">About:</a></li>
+			<li><a href="the_problem.html">The Problem:</a></li>
+			<li><a href="the_solution.html">The Solution:</a></li>
+			<li><a href="git_involved.html">Git involved!:</a></li>
+			<ul>
+				<li><a href="https://discord.io/techdufus">Join Discord:</a></li>
+				<li><a href="learning_library.html"><span class="highlight">Learning Library:</span></a></li>
+				<li><a href="community_projects.html">Community Projects:</a></li>
+				<li><a href="hello_skyy_projects.html">Hello Skyy Projects:</a></li>
+				<li><a href="recommended_apps.html">Recommended Apps:</a></li>
+			</ul>
+			<li><a href="services.html">Services</a></li>
+		</ul>
+	</aside>
+
+	<main class="PoUW">
+		<img src="assets/frame_002.jpg"
+			 alt="Logo">
+		<h1>Welcome to Fluxcore and PoUW:</h1>
+		<p>This guide will assist you in your installation and configuration of Fluxcore!</p>
+		<p>Let's dive right in!</p>
+		<p>&nbsp;</p> <!-- Empty Paragraph for space -->
+		<p>Fluxcore is currently available for Linux (Ubuntu) and windows, with more options coming in the future.</p>
+		<h3>Linux Installation:</h3>
+		<p>Ubuntu 22.04 (desktop or server) and Nvidia driver 535 are recommended, however other options may also work.
+			Fluxcore is capable of managing all of your systems from a GUI similar to the way Hive works (assuming you
+			have used Hive OS). One key difference is how you access the GUI. In Fluxcore, you install fluxcore on your
+			workstation, and host your own private webserver page for the GUI. If you only have a single system, and it
+			will be used when you are not using it, this is all you need to do. However if you have purpose built servers,
+			you will want to install Fluxcore on your work station for the GUI, then add the servers in the GUI and
+			control them remotely, after installing Fluxcore on them as well</p>
+		<p>Once you have Ubuntu installed, GPU's installed and Nvidia driver 535 installed, It's time to install Fluxcore.</p>
+		<p><span class="highlight">Step 1: </span>Open a terminal window, or your favorite IDE. Next run the bash script for the install</p>
+		<p>curl -o setup.sh https://download.fluxcore.ai/setup.sh ; bash setup.sh</p>
+		<img src="assets/fluxcore001.png" alt="fluxcore001" class="fluxcore-photo">
+		<p><span class="highlight">Step 2: </span>Install the prerequisites by entering "p" and pressing "Enter"</p>
+		<img src="assets/fluxcore002.png" alt="fluxcore002" class="fluxcore-photo">
+		<p><span class="highlight">Step 3: </span>Run the bash script again and this time enter "m" and press "Enter"
+			it will prompt you for an IP to bind the webserver to. Accept the default, and it will automatically open
+			in your web browser. </p>
+		<p><span class="highlight">Step 4: </span>You will be prompted to register an account. For right now, only the
+			google log in works, but the Dev team is working hard to get the other options working as well. You will also
+			be pompted to set up Two Factor Authentication. Any of the common 2FA applications should work for this. If
+			2FA applications are new to you, hop onto youtube and watch a quick video on how to set up Authy (or similar).
+			Once you get logged in, you should now see the following screen.</p>
+		<img src="assets/fluxcore003.png" alt="fluxcore003" class="fluxcore-photo">
+		<p>fluxcore will continue to run in your terminal window. Don't close it!</p>
+		<p><span class="highlight">Step 5: </span>Set up proper "overclocks" for the GPU's before configuring fluxcore to
+			mine or running any benchmarks. While OC settings are of great debate, what is most important is limiting power,
+			and managing fan speeds so that the GPU's don't overheat. Flux core has the ability to manage these settings
+			internally, however at the time of writing this, it was not yet working correctly, so I want to share how to 
+			manually change these settings in Ubuntu, as well as the config settings that need to be modified.</p>
+		<p>Before you can power limit and set fan speeds, a couple of config files need to be edited so you do not receive
+			errors when changing the default settings. Once that is complete you can use Terminal to manually set power
+			limits and fan speeds, (you can also go into the Nvidia X-server desktop application to set fan speed)</p>
+		<img src="assets/fluxcore004.png" alt="fluxcore004" class="fluxcore-photo">
+		<p>You can get to the Fluxcore OC settings by going to "Account" on the left side, then choosing "OC Profiles"</p>
+		<img src="assets/fluxcore005.png" alt="fluxcore005" class="fluxcore-photo">
+		<p><span class="highlight">Step 6: </span>Set up your mining profile, by clicking "mining" on the left side, then
+			select the machine you want to configure under "my machines". Select coin, pool, wallet, (choose configure your
+			saved wallets, then paste your deposit address into the field along with the name of the coin so it is obvious
+			what this wallet is for in the future) lastly select the GPU's to assign to this mining profile and save the
+			config. This is the screen where you configure a mining profile.</p>
+		<img src="assets/fluxcore006.png" alt="fluxcore006" class="fluxcore-photo">
+
+
+
+
+		<!-- the below code is the same on each page of the site -->
+		<div class="footer-content">
+			<h4>
+				<p>To contact us, please join our discord.</p>
+			</h4>
+			<h4>
+				<p>&copy; 2023 Hello Skyy. All rights reserved.</p>
+			</h4>
+		</div>
+	</main>
+
+
+</body>
+
+</html>
