@@ -111,37 +111,25 @@
 		<p>&nbsp;</p> <!-- Empty Paragraph for space -->
 		<p>Fluxcore is currently available for Linux (Ubuntu) and windows, with more options coming in the future.</p>
 		<h3>Linux Installation:</h3>
-		<p>Ubuntu 22.04 (desktop or server) and Nvidia driver 535 are recommended, however other options may also work.
-			Fluxcore is capable of managing all of your systems from a GUI similar to the way Hive works (assuming you
-			have used Hive OS). One key difference is how you access the GUI. In Fluxcore, you first install fluxcore on
-			your workstation, and host your own private webserver page for the GUI. If you only have a single system, and
-			you will only be mining when you ar enot using it, this is all you need to do. However, if you have purpose
-			built servers, you will want to install Fluxcore on your work station for the GUI, then add/link the remote
-			servers in the GUI as additional machines. You can then install Fluxcore on the servers, and control them
-			remotely from the GUI on your work station.</p>
+		<p>Ubuntu 22.04 (desktop or server) is recommended, however other options may also work. Fluxcore is capable of
+			managing all of your systems from a GUI similar to the way Hive works (assuming you have used Hive OS). One
+			key difference is how you access the GUI. In Fluxcore, you first install fluxcore on your workstation, and
+			host your own private webserver page for the GUI. If you only have a single system, and you will only be
+			mining when you ar enot using it, this is all you need to do. However, if you have purpose built servers, you
+			will want to install Fluxcore on your work station for the GUI, then add/link the remote servers in the GUI
+			as additional machines. You can then install Fluxcore on the servers, and control them remotely from the GUI
+			on your work station.</p>
 		<h3>Configuring an initial system with webserver GUI as a standalone or central control for other servers</h3>
 
-		<p><span class="highlight">Step 1: </span>Configure system with Ubuntu 22.04 Desktop and Nvidia 535 driver. Ubuntu
-			will attempt to install the latest Nvidia driver (currently 545). Additionally 545 has a bug that can cause the
-			package to break and have to be manually removed before you can install 535. Ubuntu will continue to
-			attempt to upgrade to the latest driver unless you lock it to the 535 version needed for Fluxcore. Use the 
-			below commands to remove 545 and install 535. </p>
-			<p>sudo apt-get purge nvidia-*</p>
-			<p>reboot the system</p>
-			<p>sudo apt-get update</p>
-			<p>sudo apt-get install nvidia-driver-535</p>
-			<p>sudo apt-mark hold nvidia-driver-535</p>
-		<img src="assets/fluxcore007.png" alt="fluxcore007" class="fluxcore-photo">	
-		<p>&nbsp;</p> <!-- Empty Paragraph for space -->
+		<p><span class="highlight">Step 1: </span>Configure system with Ubuntu 22.04 Desktop. 
 			Once you have Ubuntu installed, GPU's installed and Nvidia driver 535 installed, It's time to install Fluxcore.</p>
+		<p>&nbsp;</p> <!-- Empty Paragraph for space -->	
 		<p><span class="highlight">Step 2: </span>Open a terminal window, or your favorite IDE. Next run the bash script
 			for the install</p>
 		<p>curl -o setup.sh https://download.fluxcore.ai/setup.sh ; bash setup.sh</p>
 		<img src="assets/fluxcore001.png" alt="fluxcore001" class="fluxcore-photo">
-		<p><span class="highlight">Step 3: </span>Install the prerequisites by entering "p" and pressing "Enter"</p>
-		<img src="assets/fluxcore002.png" alt="fluxcore002" class="fluxcore-photo">
-		<p><span class="highlight">Step 4: </span>At this point you have 2 options. You can run run the bash script again
-			and this time enter "m" and press "Enter" This will install an instance that has to be manually started and
+		<p>At this point you have 2 options. You can run run the bash script and
+			enter "m" and press "Enter" This will install an instance that has to be manually started and
 			stopped. The second option os to enter "d" and it will always run fluxcore in the background. (mining and PoUW
 			can still be manually started and stopped at any time). Once you make your choice, it will install, and when
 			it finishes it will prompt you for an IP to bind the webserver to. Accept the default if you dont want to be
@@ -152,7 +140,7 @@
 			After this process completes (be patient) FLuxcore will automatically open in your web browser to the IP/port
 			of the web server and allow you GUI control over FLuxcore. (if you chose Daemon install you will open your
 			own browser window using the link it provides)</p>
-		<p><span class="highlight">Step 5: </span>The system will do some initial checks, and will offer you the machine
+		<p><span class="highlight">Step 3: </span>The system will do some initial checks, and will offer you the machine
 			hash ID and the machine password. Save these values as you may need them later. Each install will have its own
 			unique machine hash and passwrod values. You will be prompted to register an account. At the time of writing
 			this, only the google log in works, but the Dev team is working hard to get the other options working as well.
@@ -162,53 +150,64 @@
 			application, configure your public wallet address, and install the mining module.</p>
 		<img src="assets/fluxcore003.png" alt="fluxcore003" class="fluxcore-photo">
 		<p>(fluxcore will continue to run in your terminal window. Don't close it!)</p>
-		<p><span class="highlight">Step 6: </span>Set up proper "overclocks" for the GPU's before configuring fluxcore to
-			mine or running any benchmarks. While OC settings are of great debate, what is most important is limiting power,
-			and managing fan speeds so that the GPU's don't overheat. Flux core has the ability to manage these settings
-			internally, however at the time of writing this, it was not yet functional, so I want to share how to 
-			manually change these settings in Ubuntu, as well as the config settings that need to be modified.</p>
-		<p>Before you can power limit and set fan speeds, a couple of config files need to be edited so you do not receive
-			errors when changing the default settings. Once that is complete you can use Terminal to manually set power
-			limits and fan speeds, (you can also go into the Nvidia X-server desktop application to set fan speed). Pay
-			attention to the commands below, as they change slightly depending on the number of GPU's you have, and the
-			percent fan speed you want to apply.</p>
-		<img src="assets/fluxcore004.png" alt="fluxcore004" class="fluxcore-photo">
-		<p>You can get to the Fluxcore OC settings by going to "Account" on the left side, then choosing "OC Profiles"</p>
-		<img src="assets/fluxcore005.png" alt="fluxcore005" class="fluxcore-photo">
-		<p><span class="highlight">Step 7: </span>Set up your mining profile, by clicking "mining" on the left side, then
+
+		<p><span class="highlight">Step 4: </span>Set up your mining profile, by clicking "mining" on the left side, then
 			select the machine you want to configure under "my machines". Select coin, pool, wallet, (choose configure your
 			saved wallets, then paste your deposit address into the field along with the name of the coin so it is obvious
 			what this wallet is for in the future) lastly select the GPU's to assign to this mining profile and save the
 			config. This is the screen where you configure a mining profile.</p>
 		<img src="assets/fluxcore006.png" alt="fluxcore006" class="fluxcore-photo">
-		<p>At this point you have successfully installed and configured your first system on fluxcore!</p>		
+		
+
+		<p><span class="highlight">Step 5: </span>Set up proper "overclocks" for the GPU's before configuring fluxcore to
+			mine or running any benchmarks. While OC settings are of great debate, what is most important is limiting power,
+			and managing fan speeds so that the GPU's don't overheat. Flux core has the ability to manage these settings
+			internally, however at the time of writing this, GPU fan control was not yet functional.
+		<p>You can get to the Fluxcore OC settings by going to "Account" on the left side, then choosing "OC Profiles"</p>
+		<img src="assets/fluxcore005.png" alt="fluxcore005" class="fluxcore-photo">	
+		
+		<p><span class="highlight">Step 6: </span>Your fluxcore installation is complete now! However, you may need a method
+			to power limit the GPU and control the fan speeds until the Fluxcore software is capable of doing it. Hopefully
+			the below instructions will help you while the Fluxcore software development continues.
+			<span class="highlight">Additional Notes: </span>At the time of writing this, Fluxcore and Ubuntu desktop was
+			automatically installing Nvidia 545 drivers, and I have been unable to get 545 to stop throwing errors while
+			attempting to use the nvidia-settings package to allow GPU fan control. Feel free to attempt to get the 545
+			drivers working, but if you run into this issue, you can use the below method to remove 545 and install 535 then
+			have GPU fan control via command line. (or configure a script)</p>
+		<img src="assets/fluxcore004.png" alt="fluxcore010" class="fluxcore-photo">
+
+
+
+
+
 
 		<p>&nbsp;</p> <!-- Empty Paragraph for space -->
 		<h3>Add additional servers to the GUI and control remotely</h3>
 		<p><span class="highlight">Step 1: </span>Configuring dedicated remote servers for control with your workstation: 
-			We recommend installing Ubuntu server and Nvidia driver 535 for your remote server but other options may also
-			work. Once you have these installed, run the bash script for the Fluxcore install!</p>
+			We recommend installing Ubuntu server for your remote server but other options may also
+			work. Once you have the OS installed, run the bash script for the Fluxcore install!</p>
 		<p>curl -o setup.sh https://download.fluxcore.ai/setup.sh ; bash setup.sh</p>
 		<img src="assets/fluxcore001.png" alt="fluxcore001" class="fluxcore-photo">
-		<p><span class="highlight">Step 2: </span>Install the prerequisites by entering "p" and pressing "Enter"</p>
+		<p>&nbsp;</p> <!-- Empty Paragraph for space -->
 		<img src="assets/fluxcore002.png" alt="fluxcore002" class="fluxcore-photo">
-		<p><span class="highlight">Step 3: </span>Run the bash script again and this time enter "d" and press "Enter"
-			it will prompt you for an IP to bind the webserver to. You must use the server IP to be able to see it remotely,
-			and control it from another system via the GUI. You can now paste that IP/port for the server into your
-			workstation browser, and be able to finish the configuration. The system will run a few checks and will provide
-			you machine hash and machine password. It is very important to write these down as you will need them in the
-			next step and the machine password cannot be retrieved after the fact. (without reinstallation)</p>
-		<p><span class="highlight">Step 4: </span>From your workstation you can now see the server by putting the IP of the
-			server into your browser window with :18180 on the end (example:192.168.72.162:18180) This will kick off the
-			initial test run, and return your machine hash and machine password for linking it to another GUI. However,
-			if you wouldlike to log into it to control it, or make changes to the server from your workstation you need to
-			make a few changes to this file.</p>
+		<p><span class="highlight">Step 2: </span>Run the bash script and enter "d" and press "Enter"
+			Fluxcore will attempt to install all prerequisitesincluding the Nvidia drivers. Once complete it will prompt
+			you for an IP to bind the webserver to. You must use the server IP to be able to see it remotely, and control
+			it from another system via the GUI. You can now paste that IP/port for the server into your workstation browser,
+			and be able to finish the configuration. The system will run a few checks and will provide you machine hash
+			and machine password. It is very important to write these down as you will need them in the next step and the
+			machine password cannot be retrieved after the fact. (without reinstallation). Reboot the system.</p>
+		<p><span class="highlight">Step 3: </span>Once rebooted, From your workstation you can now see the server by putting
+			the IP of the server into your browser window with :18180 on the end (example:192.168.72.162:18180) This will
+			kick off the initial test run, and return your machine hash and machine password for linking it to another GUI.
+			However, if you wouldlike to log into it to control it, or make changes to the server from your workstation you
+			need to make a few changes to this file.</p>
 		<p>sudo nano /etc/hosts</p>
-		<p>Next add the server IP as machine 1, with the next one you add as machine 2, etc. Doing this in your workstation
-			will allow you to remote into the system, log in, and actually make changes. While this is not absolutely
-			necessary, it can be helpful if you want to access it from multiple sources without adding it to another Fluxcore
-			GUI. After adding: 192.168.72.162 machine1.remote.fluxcore to  your hosts file, you can now access the remote
-			server by putting this into the browser of your work station: </p>
+		<p><span class="highlight">Step 4: </span>Next add the server IP as machine 1, with the next one you add as machine 2,
+			etc. Doing this in your workstation will allow you to remote into the system, log in, and actually make changes.
+			While this is not absolutely necessary, it can be helpful if you want to access it from multiple sources without
+			adding it to another Fluxcore GUI. After adding: 192.168.72.162 machine1.remote.fluxcore to  your hosts file, you
+			can now access the remote server by putting this into the browser of your work station: </p>
 			<p>http://machine1.remote.fluxcore:18180</p>
 			
 			
@@ -219,15 +218,18 @@
 			machine hash and machine password you were given for the server you are attaching.</p>
 		<img src="assets/fluxcore009.png" alt="fluxcore009" class="fluxcore-photo">
 
-		<p><span class="highlight">Step 6: </span>Lastly, you may need a method to power limit the GPU and control the
-			fan speeds until the Fluxcore software is capable of doing it. Controlling the fans on Ubuntu server is a little
-			more involved than Ubuntu desktop because it doesnt come with the xorg package and there is no display defined.
-			Hopefully the below instructions will help you while the Fluxcore software development continues .</p>
+		<p><span class="highlight">Step 6: </span>Your fluxcore installation is complete now! However, you may need a method
+			to power limit the GPU and control the fan speeds manually. Controlling the fans on Ubuntu server is a little more
+			involved than Ubuntu desktop because it doesnt come with the xorg package and there is no display defined.
+			Hopefully the below instructions will help you while the Fluxcore software development continues.
+			<span class="highlight">Additional Notes: </span>At the time of writing this, Fluxcore was installing Nvidia 545
+			drivers, and I have been unable to get 545 to stop throwing errors while attempting to use the nvidia-settings
+			package to allow GPU fan control. Feel free to attempt to get the 545 drivers working, but if you run into this
+			issue, you can use the below method to remove 545 and install 535 and configure xorg to allow GPU fan control via
+			command line.</p>
 		<img src="assets/fluxcore010.png" alt="fluxcore010" class="fluxcore-photo">
 
-
-
-
+		
 		<!-- the below code is the same on each page of the site -->
 		<div class="footer-content">
 			<h4>
