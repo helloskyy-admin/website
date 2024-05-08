@@ -1,30 +1,29 @@
 # website
 
-Welcome to the Hello Skyy Website repository!
+![Logo](frame_002.jpg)
 
-<b>Hello Skyy Website</b>
+# Welcome to Hello Skyy
 
-<p>for CTI.110.0005 (I will delete once this class is over)</p>
-<p>1. John Eric Rue, jerue@my.waketech.edu</p>
-<p>2. this git hub account will be specifically for the helloskyy project. my personal github account is separate</p>
-<p>3. this repository is for the helloskyy website, which attempts to document methods and tools to work in the web3.0 space relitive to the flux project</p>
-<p>4. to clone the repository onto my computer,</p>
-<p>* create the repository</p>
-<p>* verify you have properly managed SSH keys within github</p>
-<p>* use the following commands when working in linux from terminal or vscode</p>
-<p>#### to create a new repository ####</p>
-<p>## initializes the project with git by going into the directory and entering</p>
-<p>  git init</p>
-<p>  git add .</p>
-<p>  git commit -m "initial push of project"</p>
-<p>## shows what branch you are working in</p>
-<p>  git branch</p>
-<p>## switches you to the main branch</p>
-<p>  git checkout main</p>
-<p>## connect it to the cloud</p>
-<p>  git remote add origin https://github.com/helloskyy-io/website.git</p>
-<p>## push first commit to the cloud</p>
-<p>  git push -u -f origin main</p>
-<p>## the -u switch makes the remote GitHub repo the default for your existing project</p>
-<p>## the -f forces git to overwrite any files that already exist on GitHub with my local files</p>
-<p>## verify the files are in github</p>
+The purpose of **Hello Skyy** is To provide a central hub, on decentralized infrastructure, in order to educate, document, and assemble the information, tools, and collaborative development space needed, as we explore an alternative to the control over people that big tech companies employ as a lucrative business model. We want to offer an alternative to big tech, and teach people how to choose freedom and privacy over convenience by exploring web3, blockchain, decentralization, and open source technologies.
+
+- [Learn more about us](https://web.helloskyy.io)
+- [Join our Discord](https://discord.io/techdufus)
+
+# HelloSkyy Website
+
+### Our Goals
+
+- **Educate** individuals about the significance and functionalities of web3 and blockchain technologies.
+- **Document** and curate comprehensive tutorials and guides that facilitate understanding and practical application.
+- **Assemble** a collaborative development space where community-driven projects are nurtured, fostering a shared commitment to decentralization and privacy.
+
+## Key Features
+
+- **Tutorials and Guides**: Step-by-step articles and videos explaining essential concepts and technologies.
+- **Community Projects**: Explore projects developed by our community that exemplify the principles of open-source and decentralized technology.
+- **Collaborative Space**: Join initiatives or start your own within a supportive environment.
+
+## Website Overview
+
+The **HelloSkyy Website** is designed to be intuitive and user-friendly, providing visitors with easy access to educational content, community projects, and information about our mission. It serves as the gateway to understanding and participating in the decentralization movement.
+
