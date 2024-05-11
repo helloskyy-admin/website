@@ -1,0 +1,22 @@
+.button {
+    display: block; /* Make the button a block element */
+    width: 100%; /* Full width */
+    background-color: #5593f0; /* Light blue background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin-bottom: 10px; /* Space between buttons */
+  }
+  
+  .button:hover {
+    background-color: #87ceeb; /* Slightly darker light blue on hover */
+  }
+  
+  .button:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last button */
+  }
