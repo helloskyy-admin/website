@@ -4,7 +4,7 @@
 
 # Welcome to Hello Skyy
 
-The purpose of **Hello Skyy** is To provide a central hub, on decentralized infrastructure, in order to educate, document, and assemble the information, tools, and collaborative development space needed, as we explore an alternative to the control over people that big tech companies employ as a lucrative business model. We want to offer an alternative to big tech, and teach people how to choose freedom and privacy over convenience by exploring web3, blockchain, decentralization, and open source technologies.
+The purpose of **Hello Skyy** is To provide a central hub, on decentralized infrastructure, to educate, document, and assemble the information, tools, and collaborative development space needed, needed for exploring alternatives to the traditional business models big tech companies. We want to offer viable options to mainstream tech solutions and empower individuals to choose freedom and privacy over convenience by exploring web3, blockchain, decentralization, and open source technologies.
 
 - [Learn more about us](https://web.helloskyy.io)
 - [Join our Discord](https://discord.io/techdufus)
