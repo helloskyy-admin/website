@@ -1,6 +1,6 @@
 # website
 
-![Logo](frame_002.jpg)
+![Logo](/assets/frame_002.jpg)
 
 # Welcome to Hello Skyy
 
